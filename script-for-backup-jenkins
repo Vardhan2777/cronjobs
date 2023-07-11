@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo yum install cronie -y
+sudo systemctl enable crond.service
+sudo systemctl start crond.service
+crontab -e
+0 0 * * * /path/to/backup/script.sh
